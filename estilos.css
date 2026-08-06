@@ -1,0 +1,118 @@
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(240, 248, 91);   
+            margin: 0;
+            padding: 0;
+            color: rgb(0, 0, 0);
+        }
+        
+        footer{
+            margin-top: 30px;
+            text-align: center;
+            background-color: #302681;
+            color: #ffffff;
+        }
+        header{
+            text-align: center;
+            padding: 10px;
+            background-color: #ffffff;
+            color: #000000;
+
+        }
+        
+        nav a  {
+            text-decoration: none;
+            color:#000000;
+            font-weight: bold;
+            margin: 10px;
+        }
+        
+        nav a :hover{
+            color: #ffff00;
+         }
+        /* refatoração de TABLE*/
+        main{
+            padding: 10px;
+        }
+        h2{
+            color: #050a36;
+        }
+        thead{
+            background-color: rgb(90, 3, 105);
+            font-weight: bolder;
+            color: aliceblue;
+        }
+        /*DEFINIÇÃO DE CLASSES*/
+        .label{
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            color: #08034b;
+
+        }
+        .btm{
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 5px;
+        }
+        .btm-cadastrar{
+            background-color: lightgreen;
+            color: azure;
+        }
+        .btm-apagar{
+            background-color: lightcoral;
+            color: black;
+        }
+        .btm-hover{
+            opacity: 0,8;
+        }
+        .acoes{
+            text-align: center;
+            background-color: #ffffff;
+        }
+        
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+.menu-header{
+    display:flex;
+    width:100%;
+    height:220px;
+}
+
+.aba{
+    flex:1;
+    text-decoration:none;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    transition:.4s;
+    overflow:hidden;
+}
+
+.aba:hover{
+    flex:5;
+}
+
+.aba span{
+    opacity:0;
+    font-size:30px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.aba:hover span{
+    opacity:1;
+}
+
+.azul1{background:#355d9c;}
+.azul2{background:#4d75da;}
+.azul3{background:#4fb8ff;}
+.amarelo{background:#ffc321;color:#222;}
+.verde1{background:#95ef74;color:#222;}
+.verde2{background:#58d83a;}
