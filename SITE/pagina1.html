@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Folclore Brasileiro</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #111;
+            background: white;
+            line-height: 1.7;
+        }
+
+        /* CABEÇALHO */
+        header {
+            background: #009c3b;
+            border-bottom: 5px solid #ffdf00;
+            padding: 18px 8%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: white;
+        }
+
+        .logo span {
+            font-size: 28px;
+        }
+
+        .logo h1 {
+            font-size: 22px;
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffdf00;
+        }
+
+        /* INÍCIO */
+        .inicio {
+            min-height: 650px;
+            background: linear-gradient(135deg, #009c3b, #006b2b);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 80px 10%;
+            overflow: hidden;
+        }
+
+        .inicio-texto {
+            max-width: 650px;
+        }
+
+        .inicio small {
+            color: #ffdf00;
+            font-weight: bold;
+            letter-spacing: 4px;
+        }
+
+        .inicio h2 {
+            font-size: clamp(55px, 8vw, 100px);
+            line-height: 0.95;
+            margin: 20px 0;
+            text-transform: uppercase;
+        }
+
+        .inicio h2 span {
+            color: #ffdf00;
+        }
+
+        .inicio p {
+            font-size: 19px;
+            max-width: 600px;
+            margin-bottom: 30px;
+        }
+
+        .botao {
+            display: inline-block;
+            background: #ffdf00;
+            color: #002776;
+            padding: 14px 28px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+
+        .botao:hover {
+            background: white;
+        }
+
+        /* SÍMBOLO */
+        .losango {
+            width: 280px;
+            height: 280px;
+            background: #ffdf00;
+            transform: rotate(45deg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 40px;
+        }
+
+        .circulo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: #002776;
+            border: 12px solid white;
+            transform: rotate(-45deg);
+        }
+
+        /* SEÇÕES */
+        section {
+            padding: 100px 12%;
+        }
+
+        .titulo-pequeno {
+            color: #009c3b;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            margin-bottom: 15px;
+        }
+
+        section h2 {
+            color: #002776;
+            font-size: clamp(35px, 5vw, 60px);
+            line-height: 1.1;
+            margin-bottom: 35px;
+        }
+
+        section p {
+            max-width: 850px;
+            font-size: 17px;
+            margin-bottom: 20px;
+        }
+
+        /* LENDAS */
+        .lendas {
+            background: #f4f4f4;
+        }
+
+        .lenda {
+            max-width: 1000px;
+            display: grid;
+            grid-template-columns: 70px 1fr;
+            gap: 25px;
+            padding: 30px 0;
+            border-bottom: 2px solid #ddd;
+        }
+
+        .numero {
+            color: #009c3b;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .lenda h3 {
+            color: #002776;
+            font-size: 27px;
+            margin-bottom: 5px;
+        }
+
+        .lenda p {
+            margin: 0;
+        }
+
+        /* TRADIÇÕES */
+        .tradicoes {
+            background: #002776;
+            color: white;
+        }
+
+        .tradicoes h2 {
+            color: #ffdf00;
+        }
+
+        .tradicoes .titulo-pequeno {
+            color: white;
+        }
+
+        .tradicoes ul {
+            max-width: 900px;
+            padding-left: 25px;
+        }
+
+        .tradicoes li {
+            margin: 15px 0;
+            font-size: 17px;
+        }
+
+        .tradicoes strong {
+            color: #ffdf00;
+        }
+
+        /* REGIÕES */
+        .regiao {
+            max-width: 1000px;
+            display: grid;
+            grid-template-columns: 220px 1fr;
+            gap: 30px;
+            padding: 25px 0;
+            border-bottom: 2px solid #ddd;
+        }
+
+        .regiao strong {
+            color: #009c3b;
+            font-size: 20px;
+        }
+
+        .regiao p {
+            margin: 0;
+        }
+
+        /* FRASE */
+        .frase {
+            background: #009c3b;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .frase .simbolo {
+            color: #ffdf00;
+            font-size: 45px;
+        }
+
+        .frase h2 {
+            color: white;
+            font-size: clamp(30px, 5vw, 55px);
+            margin: 20px 0;
+        }
+
+        .frase p {
+            margin: auto;
+        }
+
+        /* RODAPÉ */
+        footer {
+            background: #004d20;
+            color: white;
+            padding: 50px 10%;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        footer h2 {
+            color: #ffdf00;
+            margin-bottom: 10px;
+        }
+
+        footer p {
+            max-width: 500px;
+        }
+
+        /* CELULAR */
+        @media (max-width: 850px) {
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 12px;
+            }
+
+            .inicio {
+                min-height: 600px;
+                padding: 70px 7%;
+            }
+
+            .losango {
+                position: absolute;
+                right: -160px;
+                opacity: 0.3;
+            }
+
+            section {
+                padding: 70px 8%;
+            }
+
+            .regiao {
+                grid-template-columns: 1fr;
+                gap: 5px;
+            }
+        }
+
+        @media (max-width: 550px) {
+
+            .inicio h2 {
+                font-size: 52px;
+            }
+
+            .inicio p {
+                font-size: 16px;
+            }
+
+            .lenda {
+                grid-template-columns: 45px 1fr;
+                gap: 15px;
+            }
+
+            .lenda h3 {
+                font-size: 22px;
+            }
+
+            section h2 {
+                font-size: 40px;
+            }
+
+            footer {
+                padding: 40px 7%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+    <header>
+
+        <div class="logo">
+            <span>🇧🇷</span>
+            <h1>Folclore Brasileiro</h1>
+        </div>
+
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#folclore">O Folclore</a>
+            <a href="#lendas">Lendas</a>
+            <a href="#tradicoes">Tradições</a>
+            <a href="#regioes">Regiões</a>
+        </nav>
+
+    </header>
+
+
+    <!-- INÍCIO -->
+    <section class="inicio" id="inicio">
+
+        <div class="inicio-texto">
+
+            <small>CULTURA • HISTÓRIA • TRADIÇÃO</small>
+
+            <h2>
+                Folclore<br>
+                <span>Brasileiro</span>
+            </h2>
+
+            <p>
+                Histórias, lendas e tradições que atravessam gerações
+                e fazem parte da identidade cultural do Brasil.
+            </p>
+
+            <a href="#folclore" class="botao">
+                Conheça o folclore ↓
+            </a>
+
+        </div>
+
+        <div class="losango">
+            <div class="circulo"></div>
+        </div>
+
+    </section>
+
+
+    <!-- O FOLCLORE -->
+    <section id="folclore">
+
+        <div class="titulo-pequeno">
+            SOBRE
+        </div>
+
+        <h2>O que é o folclore?</h2>
+
+        <p>
+            O folclore é o conjunto de conhecimentos, costumes, histórias,
+            crenças, festas, músicas, danças, brincadeiras e tradições
+            transmitidos de geração em geração.
+        </p>
+
+        <p>
+            No Brasil, o folclore recebeu influências de diferentes povos,
+            principalmente indígenas, africanos e europeus.
+        </p>
+
+        <p>
+            Essa mistura criou uma cultura extremamente rica e diversificada,
+            presente em diferentes regiões do país.
+        </p>
+
+    </section>
+
+
+    <!-- LENDAS -->
+    <section class="lendas" id="lendas">
+
+        <div class="titulo-pequeno">
+            LENDAS BRASILEIRAS
+        </div>
+
+        <h2>Personagens do nosso folclore</h2>
+
+        <div class="lenda">
+            <div class="numero">01</div>
+
+            <div>
+                <h3>Saci-Pererê</h3>
+
+                <p>
+                    Menino de uma perna só, conhecido pelo gorro vermelho
+                    e por suas famosas travessuras.
+                </p>
+            </div>
+        </div>
+
+        <div class="lenda">
+            <div class="numero">02</div>
+
+            <div>
+                <h3>Curupira</h3>
+
+                <p>
+                    Protetor das florestas, conhecido pelos cabelos vermelhos
+                    e pelos pés virados para trás.
+                </p>
+            </div>
+        </div>
+
+        <div class="lenda">
+            <div class="numero">03</div>
+
+            <div>
+                <h3>Iara</h3>
+
+                <p>
+                    Conhecida como Mãe-d'Água, é uma personagem relacionada
+                    aos rios e às águas da Amazônia.
+                </p>
+            </div>
+        </div>
+
+        <div class="lenda">
+            <div class="numero">04</div>
+
+            <div>
+                <h3>Boto-cor-de-rosa</h3>
+
+                <p>
+                    Lenda amazônica sobre um boto que, segundo a tradição,
+                    poderia se transformar em um jovem.
+                </p>
+            </div>
+        </div>
+
+        <div class="lenda">
+            <div class="numero">05</div>
+
+            <div>
+                <h3>Cuca</h3>
+
+                <p>
+                    Personagem assustadora presente em histórias populares
+                    brasileiras.
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- TRADIÇÕES -->
+    <section class="tradicoes" id="tradicoes">
+
+        <div class="titulo-pequeno">
+            MANIFESTAÇÕES CULTURAIS
+        </div>
+
+        <h2>Tradições populares</h2>
+
+        <p>
+            O folclore brasileiro não é formado apenas por lendas.
+            Ele também aparece em diversas manifestações culturais.
+        </p>
+
+        <ul>
+
+            <li>
+                <strong>Festas Juninas</strong> — celebrações tradicionais
+                com danças, músicas e comidas típicas.
+            </li>
+
+            <li>
+                <strong>Folia de Reis</strong> — manifestação cultural
+                presente em diferentes regiões brasileiras.
+            </li>
+
+            <li>
+                <strong>Frevo</strong> — dança e ritmo tradicional
+                de Pernambuco.
+            </li>
+
+            <li>
+                <strong>Maracatu</strong> — manifestação cultural
+                de forte influência afro-brasileira.
+            </li>
+
+            <li>
+                <strong>Boitatá</strong> — lenda de uma grande serpente
+                de fogo protetora das matas.
+            </li>
+
+        </ul>
+
+    </section>
+
+
+    <!-- REGIÕES -->
+    <section id="regioes">
+
+        <div class="titulo-pequeno">
+            DIVERSIDADE CULTURAL
+        </div>
+
+        <h2>O folclore de cada região</h2>
+
+        <div class="regiao">
+
+            <strong>NORTE</strong>
+
+            <p>
+                Forte influência indígena e amazônica, com lendas como
+                Iara, Boto e Vitória-Régia.
+            </p>
+
+        </div>
+
+        <div class="regiao">
+
+            <strong>NORDESTE</strong>
+
+            <p>
+                Destaca-se pelas festas populares, literatura de cordel,
+                maracatu, frevo e outras manifestações.
+            </p>
+
+        </div>
+
+        <div class="regiao">
+
+            <strong>CENTRO-OESTE</strong>
+
+            <p>
+                Possui tradições ligadas à vida rural, festas populares
+                e histórias transmitidas pelas comunidades.
+            </p>
+
+        </div>
+
+        <div class="regiao">
+
+            <strong>SUDESTE</strong>
+
+            <p>
+                Reúne tradições indígenas, africanas e europeias,
+                formando uma cultura bastante diversificada.
+            </p>
+
+        </div>
+
+        <div class="regiao">
+
+            <strong>SUL</strong>
+
+            <p>
+                Apresenta influências indígenas, africanas e de diferentes
+                povos europeus.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- FRASE FINAL -->
+    <section class="frase">
+
+        <div class="simbolo">◆</div>
+
+        <h2>
+            “O folclore é a memória viva<br>
+            de um povo.”
+        </h2>
+
+        <p>
+            Conhecer nossas tradições é conhecer a história do Brasil.
+        </p>
+
+    </section>
+
+
+    <!-- RODAPÉ -->
+    <footer>
+
+        <div>
+
+            <h2>🇧🇷 Folclore Brasileiro</h2>
+
+            <p>
+                Cultura, histórias e tradições que fazem parte
+                da identidade brasileira.
+            </p>
+
+        </div>
+
+        <div>
+            © 2026 — Projeto sobre o Folclore Brasileiro
+        </div>
+
+    </footer>
+
+</body>
+</html>

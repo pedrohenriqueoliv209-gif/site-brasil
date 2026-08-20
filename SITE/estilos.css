@@ -1,0 +1,54 @@
+body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #111;
+            background: white;
+            line-height: 1.7;
+        }
+  
+        /* CABEÇALHO */
+        header {
+            background: #009c3b;
+            border-bottom: 5px solid #ffdf00;
+            padding: 18px 8%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffdf00;
+        }
+
+        footer {
+            background: #004d20;
+            color: white;
+            padding: 50px 10%;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        footer h2 {
+            color: #ffdf00;
+            margin-bottom: 10px;
+        }
+
+        footer p {
+            max-width: 500px;
+        }
