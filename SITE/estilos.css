@@ -52,3 +52,18 @@ body {
         footer p {
             max-width: 500px;
         }
+
+
+
+.card {
+    background: #F8F9FA;
+    border-left: 8px solid #009C3B;
+    padding: 20px;
+    border-radius: 12px;
+    margin: 30px 0;
+}
+
+.card h3 {
+    color: #009C3B;
+    margin-bottom: 10px;
+}
