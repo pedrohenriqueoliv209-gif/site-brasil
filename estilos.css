@@ -6,9 +6,7 @@ body {
 }
 
 
-/* =========================
-   CABEÇALHO
-========================= */
+/*CABEÇALHO */
 
 header {
     background: #009c3b;
@@ -27,9 +25,7 @@ header p {
 }
 
 
-/* =========================
-   NAVEGAÇÃO
-========================= */
+/*NAVEGAÇÃO */
 
 nav {
     display: flex;
@@ -48,9 +44,7 @@ nav a:hover {
 }
 
 
-/* =========================
-   RODAPÉ
-========================= */
+/*RODAPÉ*/
 
 footer {
     background: #002776;
@@ -72,9 +66,7 @@ footer p {
 }
 
 
-/* =========================
-   CARDS
-========================= */
+/*CARDS*/
 
 .cards {
     display: flex;
@@ -102,9 +94,7 @@ footer p {
 }
 
 
-/* =========================
-   TOPO DO CARD
-========================= */
+/*TOPO DO CARD*/
 
 .card-topo {
     display: flex;
@@ -123,9 +113,7 @@ footer p {
 }
 
 
-/* =========================
-   BOTÃO
-========================= */
+/* BOTÃO*/
 
 .card button {
     border: none;
@@ -145,10 +133,10 @@ footer p {
 }
 
 
-/* =========================
+/* 
    CARD 1 - VERDE
    LENDAS
-========================= */
+*/
 
 .card1 {
     background: #f4fff6;
@@ -168,10 +156,10 @@ footer p {
 }
 
 
-/* =========================
+/* 
    CARD 2 - AMARELO
    FESTAS
-========================= */
+ */
 
 .card2 {
     background: #fff8e1;
@@ -191,10 +179,10 @@ footer p {
 }
 
 
-/* =========================
+/* 
    CARD 3 - AZUL
    DANÇAS E MÚSICAS
-========================= */
+ */
 
 .card3 {
     background: #eaf2ff;
@@ -214,10 +202,10 @@ footer p {
 }
 
 
-/* =========================
+/* 
    CARD 4 - VERDE
    CULINÁRIA
-========================= */
+ */
 
 .card4 {
     background: #f4fff6;
@@ -237,10 +225,10 @@ footer p {
 }
 
 
-/* =========================
+/* 
    CARD 5 - AMARELO
    COSTUMES
-========================= */
+ */
 
 .card5 {
     background: #fff8e1;
@@ -260,9 +248,9 @@ footer p {
 }
 
 
-/* =========================
+/* 
    INFORMAÇÕES
-========================= */
+*/
 
 .informacoes {
     display: none;
@@ -288,9 +276,9 @@ footer p {
 }
 
 
-/* =========================
+/* 
    IMAGEM
-========================= */
+*/
 
 .informacoes img {
     width: 350px;
@@ -302,9 +290,9 @@ footer p {
 }
 
 
-/* =========================
+/* 
    TEXTO
-========================= */
+ */
 
 .texto h3 {
     color: #009c3b;
